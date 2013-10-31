@@ -143,6 +143,23 @@ ul li:before {
   line-height: 16px;
 }
 
+ul.footer li {
+	display: inline-block;
+	font-size: 10px;
+}
+
+ul.footer li:before {
+	content: ">>"  
+	font-size: 10px;
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+ul.footer li:first-child:before {
+	margin-right: 0;
+	content: "";
+}
+
 blockquote {
   color: #aaa;
   padding-left: 10px;
