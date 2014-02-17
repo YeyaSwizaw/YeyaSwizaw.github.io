@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            html, body {
+                background-color: #0FE;
+                font-family: "Calibri", "Arial", sans-serif;
+            }
+
+            .imagebox {
+                float: right;
+                margin: 10px 30px;
+                z-index: 3;
+            }
+
+            .imagebox img {
+                border: solid 2px #000;
+                border-radius: 5px;
+                z-index: 3;
+            }
+
+            .imagebox:hover img {
+                z-index: 3;
+                width: 100%;
+
+            }
+
+            .imagebox > span {
+                display: none;
+                border: solid 1px #000;
+                border-radius: 5px;
+                padding: 2px;
+            }
+
+            .imagebox:hover > span {
+                display: block;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+
+            #page {
+                width: 90%;
+                max-width: 1500px;
+                margin: 0 auto;
+                padding-top: 20px;
+                border-left: solid #00D 5px;
+                border-right: solid #00D 5px;
+                background-color: #FFF;
+            }
+
+            #header {
+                background-color: #00D;
+                padding: 10px 20px;
+                border-top: solid #000 3px;
+                border-bottom: solid #000 3px;
+            }
+
+            #header h1 {
+                font-size: 50px;
+                font-weight: bold;
+            }
+
+            #navigation {
+                background-color: #00D;
+                padding: 5px;
+                border-top: solid #000 3px;
+                border-bottom: solid #000 3px;
+                margin: 15px 0;
+            }
+
+            #navigation >* {
+                display: inline;
+            }
+
+            #navigation >ul {
+                list-style-type: none;
+                position: relative;
+                display: inline;
+                opacity: 0;
+                left: -50%;
+
+                transition: opacity 0.5s, left 0.5s;
+            }
+
+            #navigation:hover >ul {
+                opacity: 1;
+                left: 0px;
+
+                transition: opacity 0.5s, left 0.5s;
+                
+            }
+
+            #navigation >ul li {
+                display: inline;
+            }
+
+            #navigation >ul li:not(:first-child):before {
+                content: " | ";
+            }
+
+            #navigation >ul a {
+                color: #000;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            #navigation >ul a:hover {
+                font-style: italic;
+            }
+
+            #content {
+                padding-bottom: 20px;
+            }
+
+            #content a {
+                text-decoration: none;
+                color: #00D;
+            }
+
+            #content a:hover {
+                text-decoration: underline;
+            }
+
+            .contentcontainer h2 {
+                padding: 0 30px;
+                padding-bottom: 10px;
+
+            }
+
+            .contentcontainer:not(:first-child) h2 {
+                padding-top: 20px;
+            }
+
+            .contentcontainer >p {
+                padding: 0 20px;
+                padding-right: 20%;
+            }
+
+            .contentcontainer p:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .contentcontainer p:hover {
+                background-color: #DDD;
+            }
+
+            .contentcontainer ul {
+                padding-left: 40px;
+            }
+
+            .contentcontainer ul p {
+                padding-right: 20%;
+                padding-bottom: 10px;
+            }
+
+            .contentcontainer dl {
+                padding-left: 40px;
+            }
+
+            .contentcontainer dt:hover, .contentcontainer dd:hover {
+                background-color: #DDD;
+            }
+
+            .contentcontainer dl dt {
+                padding-right: 20%;
+                display: list-item;
+                list-style-type: disc;
+            }
+
+            .contentcontainer dl dt:after {
+                content: ":";
+            }
+
+            .contentcontainer dl dd {
+                padding-right: 20%;
+                margin-bottom: 10px;
+            }
+
+            .hasbox {
+                position: relative;
+                border-bottom: 1px dashed #000;
+            }
+
+            .hasbox >.box {
+                white-space: nowrap;
+                position: absolute;
+                display: none;
+                border: 1px solid #000;
+                border-radius: 5px;
+                padding: 3px;
+                background-color: #FFF;
+                z-index: 2;
+            }
+
+            .hasbox:hover >.box {
+                display: block;
+                left: -300%;
+            }
+
+        </style>
+
+        <title>XML Schema</title>
+    </head>
+
+    <body>
+        <div id="page">
+            <div id="header">
+                <h1>XML Schema</h1>
+            </div>
+
+            <div id="navigation">
+                <a class="bold">→</a>
+                <ul>
+                    <li><a href="#xmlschema">XML Schema</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#schemas">Schemas and Schema Documents</a></li>
+                    <li><a href="#components">Schemas Components</a></li>
+                    <li><a href="#types">Types</a></li>
+                </ul>
+            </div>
+
+            <div id="content">
+                <div class="contentcontainer" id="xmlschema">
+                    <h2>XML Schema</h2>
+
+                    <div class="imagebox">
+                        <img src="schemaexample.png" width="100">
+                        <span>An example xml schema file. (From w3schools)</span>
+                    </div>
+
+                    <p>XML Schema, published as a <span class="hasbox">W3C<span class="box">World Wide Web Consortium</span></span> recommendation in May 2001, is one of several XML schema languages. It was the first separate schema language for XML to achieve Recommendation status by the W3C. Because of confusion between XML Schema as a specific W3C specification, and the use of the same term to describe schema languages in general, some parts of the user community referred to this language as WXS, an initialism for W3C XML Schema, while others referred to it as XSD, an initialism for XML Schema Definition. In Version 1.1 the W3C has chosen to adopt XSD as the preferred name, and that is the name used in this article.</p>
+                    <p>Like all XML schema languages, XSD can be used to express a set of rules to which an XML document must conform in order to be considered 'valid' according to that schema. However, unlike most other schema languages, XSD was also designed with the intent that determination of a document's validity would produce a collection of information adhering to specific data types. Such a post-validation infoset can be useful in the development of XML document processing software, but the schema language's dependence on specific data types has provoked criticism.</p>
+                </div>
+
+                <div class="contentcontainer" id="history">
+                    <h2>History</h2>
+                    <p>In its appendix of references, the XSD specification acknowledges the influence of DTDs and other early XML schema efforts such as <span class="hasbox">DDML<span class="box">Document Definition Markup Language</span></span>, <span class="hasbox">SOX<span class="box">Schema for Object-Oriented XML</span></span>, XML-Data, and <span class="hasbox">XDR<span class="box">XML-Data Reduced Schema</span></span>. It has adopted features from each of these proposals but is also a compromise among them. Of those languages, XDR and SOX continued to be used and supported for a while after XML Schema was published. A number of Microsoft products supported XDR until the release of MSXML 6.0 (which dropped XDR in favor of XML Schema) in December 2006. Commerce One, Inc. supported its SOX schema language until declaring bankruptcy in late 2004.</p>
+                    <p>The most obvious features offered in XSD that are not available in XML's native Document Type Definitions (DTDs) are namespace awareness and datatypes, that is, the ability to define element and attribute content as containing values such as integers and dates rather than arbitrary text.</p>
+                    <p>The XSD 1.0 specification was originally published in 2001, with a second edition following in 2004 to correct large numbers of errors. XSD 1.1 became a W3C Recommendation in April 2012.</p>
+                </div>
+
+                <div class="contentcontainer" id="schemas">
+                    <h2>Schemas and Schema Documents</h2>
+                    <p>Technically, a schema is an abstract collection of metadata, consisting of a set of schema components: chiefly element and attribute declarations and complex and simple type definitions. These components are usually created by processing a collection of schema documents, which contain the source language definitions of these components. In popular usage, however, a schema document is often referred to as a schema.</p>
+                    <p>Schema documents are organized by namespace: all the named schema components belong to a target namespace, and the target namespace is a property of the schema document as a whole. A schema document may include other schema documents for the same namespace, and may import schema documents for a different namespace.</p>
+                    <p>When an instance document is validated against a schema (a process known as assessment), the schema to be used for validation can either be supplied as a parameter to the validation engine, or it can be referenced directly from the instance document using two special attributes, xsi:schemaLocation and xsi:noNamespaceSchemaLocation. (The latter mechanism requires the client invoking validation to trust the document sufficiently to know that it is being validated against the correct schema. "xsi" is the conventional prefix for the namespace "<a href="http://www.w3.org/2001/XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>".)</p>
+                    <p>XML Schema Documents usually have the filename extension ".xsd". A unique Internet Media Type is not yet registered for XSDs, so "application/xml" or "text/xml" should be used, as per RFC 3023.</p>
+                </div>
+
+                <div class="contentcontainer" id="components">
+                    <h2>Schema Components</h2>
+                    <p>The main components of a schema are:</p>
+                    <ul>
+                        <li><p>Element declarations, which define properties of elements. These include the element name and target namespace. An important property is the type of the element, which constrains what attributes and children the element can have. In XSD 1.1, the type of the element may be conditional on the values of its attributes. An element may belong to a substitution group; if element E is in the substitution group of element H, then wherever the schema permits H to appear, E may appear in its place. Elements may have integrity constraints: uniqueness constraints determining that particular values must be unique within the subtree rooted at an element, and referential constraints determining that values must match the identifier of some other element. Element declarations may be global or local, allowing the same name to be used for unrelated elements in different parts of an instance document.</p></li>
+                        <li><p>Attribute declarations, which define properties of attributes. Again the properties include the attribute name and target namespace. The attribute type constrains the values that the attribute may take. An attribute declaration may also include a default value or a fixed value (which is then the only value the attribute may take.)</p></li>
+                        <li><p>Simple and complex types. These are described in the following section.</p></li>
+                        <li><p>Model group and attribute group definitions. These are essentially macros: named groups of elements and attributes that can be reused in many different type definitions.</p></li>
+                        <li><p>An attribute use represents the relationship of a complex type and an attribute declaration, and indicates whether the attribute is mandatory or optional when it is used in that type.</p></li>
+                        <li><p>An element particle similarly represents the relationship of a complex type and an element declaration, and indicates the minimum and maximum number of times the element may appear in the content. As well as element particles, content models can include model group particles, which act like non-terminals in a grammar: they define the choice and repetition units within the sequence of permitted elements. In addition, wildcard particles are allowed, which permit a set of different elements (perhaps any element provided it is in a certain namespace).</p></li>
+                    </ul>
+                    <p>Other more specialized components include annotations, assertions, notations, and the schema component which contains information about the schema as a whole.</p>
+                </div>
+
+                <div class="contentcontainer" id="types">
+                    <h2>Types</h2>
+                    <p>Complex types describe the permitted content of an element, including its element and text children and its attributes. A complex type definition consists of a set of attribute uses and a content model. Varieties of content model include element-only content, in which no text may appear (other than whitespace, or text enclosed by a child element); simple content, in which text is allowed but child elements are not; empty content, in which neither text nor child elements are allowed; and mixed content, which permits both elements and text to appear. A complex type can be derived from another complex type by restriction (disallowing some elements, attributes, or values that the base type permits) or by extension (allowing additional attributes and elements to appear). In XSD 1.1, a complex type may be constrained by assertions — XPath 2.0 expressions evaluated against the content that must evaluate to true.</p>
+                    <p>Simple types (also called data types) constrain the textual values that may appear in an element or attribute. This is one of the more significant ways in which XML Schema differs from DTDs. For example, an attribute might be constrained to hold only a valid date or a decimal number.</p>
+                    <p>XSD provides a set of 19 primitive data types (anyURI, base64Binary, boolean, date, dateTime, decimal, double, duration, float, hexBinary, gDay, gMonth, gMonthDay, gYear, gYearMonth, NOTATION, QName, string, and time). It allows new data types to be constructed from these primitives by three mechanisms:</p>
+                    <dl>
+                        <dt>Restriction</dt>
+                        <dd>Reducing the set of permitted values</dd>
+
+                        <dt>List</dt>
+                        <dd>Allowing a sequence of values</dd>
+
+                        <dt>Union</dt>
+                        <dd>Allowing a choice of values from several types</dd>
+                    </dl>
+                    <p>Twenty-five derived types are defined within the specification itself, and further derived types can be defined by users in their own schemas.</p>
+                    <p>The mechanisms available for restricting data types include the ability to specify minimum and maximum values, regular expressions, constraints on the length of strings, and constraints on the number of digits in decimal values. XSD 1.1 again adds assertions, the ability to specify an arbitrary constraint by means of an XPath 2.0 expression.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
