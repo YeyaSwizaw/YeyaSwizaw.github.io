@@ -1,51 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <head>
+        <meta charset='utf-8'>
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" />
 
-    <title>Sam Sleight's Programming Projects</title>
-  </head>
+        <title>Sam Sleight</title>
+    </head>
 
-  <body>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>Samuel Sleight</h1>
+            </div>
 
-    <header>
-      <div class="container">
-        <h1>yeyaswizaw.co.uk</h1>
-		<br />
+            <div id="content">
+                <div onclick="window.location='https://github.com/YeyaSwizaw/teabag'">
+                    <h2>Teabag</h2>
+                    <p>Teabag (TilE BAsed Game engine) is a game engine I am in the process of making, written in C++, and using <a href="http://www.sfml-dev.org/">SFML</a>. The idea behind it was to automate the loading and rendering of maps and entities, leaving the user to focus almost entirely on the game logic. It uses simple text files to define maps, tiles, entities and sprites, and events are managed using event callbacks.</p>
+                    <p>Currently, it can load a single map, display entities and handle events and collision, which is enough to create very simple games (i.e. pong). Planned features for the future include:</p>
+                    <ul>
+                        <li>Loading of different maps</li>
+                        <li>Sprite/tile animations</li>
+                        <li>Better collision</li>
+                        <li>Dynamic creation of entities in-code</li>
+                        <li>Custom events (A signals and slots mechanism, perhaps)</li>
+                    </ul>
+                    <p>In addition to the C++ version which can be found <a href="https://github.com/YeyaSwizaw/teabag">here</a>, there is also an OCaml version and a Haskell version, which I created to experiment with functional languages, and there is no guarentee that they will be at the same standard as the C++ version. They can be found <a href="https://github.com/YeyaSwizaw/ocaml-teabag">here</a> and <a href="https://github.com/YeyaSwizaw/haskell-teabag">here</a>, respectively.</p>
+                </div>
 
-        <section id="downloads">
-          <a href="https://github.com/YeyaSwizaw" class="btn btn-github"><span class="icon"></span>GitHub</a>
-        </section>
-      </div>
-    </header>
+                <div onclick="window.location='https://github.com/YeyaSwizaw/libworldgen'">
+                    <h2>libworldgen</h2>
+                    <p>libworldgen is a C++ library I created to facilitate simple generation of random 2d noise maps. It is a wrapper around <a href="http://libnoise.sourceforge.net/">libnoise</a> that hides all of the fiddling with modules and such, and tries to make it as easy as possible.</p>
+                    <p>It uses noise maps, which can be configured and can either be randomly generated or combinations of others, which are then built into a map based on specified tile definitions. The map can either be made up of these tile definitions, or filled with custom objects specified in the definition.</p>
+                    <p>Its github page can be found <a href="https://github.com/YeyaSwizaw/libworldgen">here</a> and there is a (rather badly made) infinite world viewer using it <a href="https://github.com/YeyaSwizaw/WorldViewer">here</a>.
+                </div>
+            </div>
 
-    <div class="container">
-      <section id="main_content">
-        <h3><a name="sam-sleights-programming-projects" class="anchor" href="#sam-sleights-programming-projects"><span class="octicon octicon-link"></span></a>Sam Sleight's Programming Projects</h3>
-		<ul>
-			<li class="hasmenu"><a>libworldgen</a>
-				<ul class="menu">
-					<li><a href="https://github.com/YeyaSwizaw/libworldgen" class="btn btn-github"><span class="icon"></span>GitHub</a></li>
-					<li><a href="libworldgen" class="btn">Documentation</a></li>
-				</ul>
-			</li>
-			<li class="hasmenu"><a>teabag</a>
-				<ul class="menu">
-					<li><a href="https://github.com/YeyaSwizaw/teabag" class="btn btn-github"><span class="icon"></span>GitHub</a></li>
-				</ul>
-			</li>
-		</ul>
-      </section>
-
-	  <ul class="footer">
-		  <li>Hosted on <a href="https://pages.github.com">Github Pages</a></li>
-		  <li>DNS by <a href="https://freedns.afraid.org/">afraid.org</a></li>
-	  </ul>
-    </div>
-  </body>
+            <ul id="footer">
+                <li>Hosted on <a href="https://pages.github.com">Github Pages</a></li>
+                <li>DNS by <a href="https://freedns.afraid.org/">afraid.org</a></li>
+            </ul>
+        </div>
+    </body>
 </html>
