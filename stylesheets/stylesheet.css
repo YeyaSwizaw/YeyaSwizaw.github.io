@@ -29,6 +29,14 @@ h1, h2 {
     box-shadow: 3px 5px 5px 0px #333;
 }
 
+#header:hover {
+    position: relative;
+    top: +2px;
+    left: +2px;
+    box-shadow: 1px 2px 2px 0px #333;
+    cursor: pointer;
+}
+
 #nav {
     display: -webkit-flex;
     display: flex;
@@ -44,6 +52,7 @@ h1, h2 {
 #nav > div {
     z-index: 2;
     margin: 0;
+    padding: 5px 0;
     width: 100%;
     text-align: center;
     border-top: #000000 2px solid;
@@ -51,9 +60,10 @@ h1, h2 {
     background: #AAA;
 }
 
-#nav > div p {
-    padding: 5px 0;
-    margin: 0;
+#nav > div a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
 }
 
 #nav > div:first-child {

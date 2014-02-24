@@ -5,24 +5,24 @@
 
         <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" />
 
-        <title>Sam Sleight</title>
+        <title>Samuel Sleight</title>
     </head>
 
     <body>
         <div id="container">
-            <div id="header">
+            <div id="header" onclick="window.location='index.html'">
                 <h1>Samuel Sleight</h1>
             </div>
 
             <div id="nav">
-                <div>
-                    <p>TEST</p>
+                <div onclick="window.location=this.getElementsByTagName('a')[0].getAttribute('href');">
+                    <a href="index.html">Home</a>
                 </div>
-                <div>
-                    <p>More test!</p>
+                <div onclick="window.location=this.getElementsByTagName('a')[0].getAttribute('href');">
+                    <a href="programming.html">Programming</a>
                 </div>
-                <div>
-                    <p>YAY</p>
+                <div onclick="window.location=this.getElementsByTagName('a')[0].getAttribute('href');">
+                    <a href="other.html">Other</a>
                 </div>
             </div>
 
