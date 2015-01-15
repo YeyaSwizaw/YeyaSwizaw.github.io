@@ -30,12 +30,10 @@
                 <div onclick="window.location='https://github.com/YeyaSwizaw/teabag'">
                     <h2>Teabag</h2>
                     <p>Teabag (TilE BAsed Game engine) is a game engine I am in the process of making, written in C++, and using <a href="http://www.sfml-dev.org/">SFML</a>. The idea behind it was to automate the loading and rendering of maps and entities, leaving the user to focus almost entirely on the game logic. It uses simple text files to define maps, tiles, entities and sprites, and events are managed using event callbacks.</p>
-                    <p>Currently, it can load a single map, display entities and handle events and collision, which is enough to create very simple games (i.e. pong). Planned features for the future include:</p>
+                    <p>Currently, it can load maps, display entities and handle events and collision, which is enough to create simple games such as a platformer or a top-down RPG. Planned features for the future include:</p>
                     <ul>
-                        <li>Loading of different maps</li>
                         <li>Sprite/tile animations</li>
                         <li>Better collision</li>
-                        <li>Dynamic creation of entities in-code</li>
                         <li>Custom events (A signals and slots mechanism, perhaps)</li>
                     </ul>
                     <p>In addition to the C++ version which can be found <a href="https://github.com/YeyaSwizaw/teabag">here</a>, there is also an OCaml version and a Haskell version, which I created to experiment with functional languages, and there is no guarentee that they will be at the same standard as the C++ version. They can be found <a href="https://github.com/YeyaSwizaw/ocaml-teabag">here</a> and <a href="https://github.com/YeyaSwizaw/haskell-teabag">here</a>, respectively.</p>
@@ -49,10 +47,11 @@
                     <p>Its github page can be found <a href="https://github.com/YeyaSwizaw/libworldgen">here</a> and there is a (rather badly made) infinite world viewer using it <a href="https://github.com/YeyaSwizaw/WorldViewer">here</a>.
                 </div>
 
-                <div onclick="window.location='https://github.com/YeyaSwizaw/ocaml-search'">
-                    <h2>OCaml search framework</h2>
-                    <p>After implementing something one in Java in the Robot Progamming module this year, I decided to implement a generic search framework in OCaml to experinent with it's object system, and I was really surprised at how much I liked it, and especially at the lack of boilerplate code compared to the java implementation. The program itself is quite simple, and should probably be in the below section, but I found it very interesting to make. It can be found <a href="https://github.com/YeyaSwizaw/ocaml-search">here</a>.</p>
-                    <p>To use it, you simply need to define a search node class and a frontier class that implement the required methods - a very simple Breadth First Search implementation is provided as an example.</p>
+                <div onclick="window.location='https://github.com/YeyaSwizaw/rust-befunge'">
+                    <h2>Befunge-to-Rust Compiler</h2>
+                    <p>After descovring the existence of Rust, I decided to take one of my C++ programs and convert it to Rust so I could get to grips with the language. I chose the <a href="http://esolangs.org/wiki/Befunge">Befunge</a> to C compiler I had writter. It is now a Befunge to Rust compiler, written in Rust, and is much more feature-complete than the old version.</p>
+                    <p>It works by making one pass over the befunge code, splitting it into areas of different states (by location, delta, and stringmode). Branching statements create new states in each direction the branch could go. It then converts all of these states into lists of actions, an internal representation of the code that will be produced. Before outputting the code it makes an optimisation pass over this, removing empty states and folding constants.</p>
+                    <p>Unfortunately, some operations in Befunge are unfeasible to convert to actual code, namely the 'p' and 'g' operations that modify the code grid. I have made these optionally enabled, as 'variables' stored in a hash table, because this is similar to one way they can be used. This does however make certain befunge programs create incorrect code, so it is disabled by default.</p>
                 </div>
                 
                 <div onclick="window.location='https://github.com/YeyaSwizaw?tab=repositories'">
